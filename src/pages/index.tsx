@@ -81,7 +81,3 @@ export const getServerSideProps: GetServerSideProps<Props> = async (context) => 
     }
   }
 }
-
-// *[_type == 'category'] {
-//   _id
-// }
