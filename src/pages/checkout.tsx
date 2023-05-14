@@ -19,7 +19,7 @@ function Checkout() {
 
     const createCheckoutSession = async () => {
         setLoading(true)
-        const checkoutSession: Stripe.checkout.Session = await fetchPostJSON("/api/checkout_sessions",
+        const checkoutSession = await fetchPostJSON("/api/checkout_sessions",
         {
             items: items,
         });
