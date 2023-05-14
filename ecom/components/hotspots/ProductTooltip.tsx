@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+// import styled from 'styled-components'
 import {PreviewLayoutKey, SchemaType, useSchema} from 'sanity'
 import {Box} from '@sanity/ui'
 import {HotspotTooltipProps} from 'sanity-plugin-hotspot-array'
@@ -12,9 +12,9 @@ interface HotspotFields {
   }
 }
 
-const StyledBox = styled(Box)`
-  width: 200px;
-`
+// const StyledBox = styled(Box)`
+//   width: 200px;
+// `
 
 export default function ProductPreview(props: HotspotTooltipProps<HotspotFields>) {
   const {value, renderPreview} = props
@@ -31,8 +31,8 @@ export default function ProductPreview(props: HotspotTooltipProps<HotspotFields>
   )
 
   return (
-    <StyledBox padding={2}>
+    <div>
       {hasProduct && previewProps ? renderPreview(previewProps) : `No product selected`}
-    </StyledBox>
+    </div>
   )
 }
