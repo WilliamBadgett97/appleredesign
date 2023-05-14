@@ -10,7 +10,7 @@ export const config = {
   apiVersion: "2021-10-21", // Learn more: https://www.sanity.io/docs/api-versioning
   useCdn: process.env.NODE_ENV === "production",
 };
-const sanityClient = createClient(config);
+export const sanityClient = createClient(config);
 // Set up the client for fetching data in the getProps page functions
 // export const sanityClient = createClient(config);
 

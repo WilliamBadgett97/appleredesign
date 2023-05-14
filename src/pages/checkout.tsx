@@ -9,7 +9,7 @@ import Button from '../../components/Button'
 import CheckoutProduct from '../../components/CheckoutProduct'
 import Currency from 'react-currency-formatter';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
-import { Stripe, loadStripe } from '@stripe/stripe-js';
+import Stripe from "stripe";
 import { fetchPostJSON } from '../../utils/api-helpers'
 import getStripe from '../../utils/get-stripe'
 
@@ -19,7 +19,7 @@ function Checkout() {
 
     const createCheckoutSession = async () => {
         setLoading(true)
-        const checkoutSession = await fetchPostJSON("/api/checkout_sessions",
+        const checkoutSession: Stripe.Checkout.Session = await fetchPostJSON("/api/checkout_sessions",
         {
             items: items,
         });
